@@ -1,0 +1,41 @@
+class bank:
+    def __init__(self,name,account_num,balance):
+        self.name=name
+        self.account_num= account_num
+        self.__balance=balance
+        
+    def welcome(self):
+        print("$$$ WELCOME TO BANK ACCOUNT SOFTWARE $$$")
+        print(" ") 
+
+    def user(self):
+        print(f"welcome to your bank account {self.name}")
+        print(f"your account number is {self.account_num}")
+    def deposit(self,amount):
+        self.__balance += amount
+        print(f"dear,{self.name} in your account ₹{amount} amount will be successfully deposited")
+            
+    def balance_check(self):
+        print(f"Dear,{self.name} your account balance is {self.__balance}")
+
+    def credit(self,amount):
+        amount=self.__balance + amount
+        print(f"{self.name} total balance is ₹{amount} ")
+        
+    def debit(self,amount):
+        if self.__balance >= amount:
+            self.__balance -= amount
+            print(f"dear,{self.name} in your account ₹{amount} successfully debited ")
+            print(f"DEAR,{self.name} your  remaining account balance is ₹{self.__balance}")
+        else:
+            print(f"dear,{self.name} insufficient balance in your account")
+        
+name=input("enter your name =").upper()
+
+user1=bank(name,14042008,18956784)
+user1.welcome()
+user1.user()
+user1.deposit(2000)
+user1.balance_check()
+user1.debit(19876)
+user1.credit(18764878687)
