@@ -1,0 +1,165 @@
+# studentmarkscardsystem
+print("=======================================================")
+print("            STUDENT MARKS CARD SYSTEM")
+print("=======================================================")
+
+print(" ")
+print("        -:WELCOME TO STUDENT MARKS CARD SYSTEM:-    ")
+
+print(" ")
+
+print("      ------------:STUDENT-DETAILS:-------------")
+
+
+
+
+Name = input("*Enter Your Name = ")
+Class = int(input("*Enter Your Class = "))
+
+if Class <= 10:
+
+    Kannada = int(input("1. Enter Your Kannada Marks = "))
+    English = int(input("2. Enter Your English Marks = "))
+    Maths = int(input("3. Enter Your Maths Marks = "))
+    Science = int(input("4. Enter Your Science Marks = "))
+    Social = int(input("5. Enter Your Social Science Marks = "))
+    total_marks = (Kannada + English + Maths + Science + Social)
+    percentage = total_marks / 625 * 100
+    print("Total Marks = ", total_marks)
+    print("Percentage = ", percentage)
+
+elif Class == 11 or Class == 12:
+
+    Stream = input("Enter Your Stream = ").lower()
+
+    if Stream == "science":
+
+        Optional_sub = input("Enter Your Optional Subject = ").lower()
+
+        if Optional_sub == "biology":
+            Kannada = int(input("1. Enter Your Kannada Marks = "))
+            English = int(input("2. Enter Your English Marks = "))
+            Physics = int(input("3. Enter Your Physics Marks = "))
+            Chemistry = int(input("4. Enter Your Chemistry Marks = "))
+            Maths = int(input("5. Enter Your Maths Marks = "))
+            Biology = int(input("6. Enter Your Biology Marks = "))
+            total_marks = Kannada + English + Physics + Chemistry + Maths + Biology
+            
+
+            percentage = total_marks /600 * 100
+            print("Total Marks = ", total_marks)
+            print("Percentage = ", percentage)
+
+        elif Optional_sub == "computer science":
+            Kannada = int(input("1. Enter Your Kannada Marks = "))
+            English = int(input("2. Enter Your English Marks = "))
+            Physics = int(input("3. Enter Your Physics Marks = "))
+            Chemistry = int(input("4. Enter Your Chemistry Marks = "))
+            Maths = int(input("5. Enter Your Maths Marks = "))
+            Computer_Science = int(input("6. Enter Your Computer Science Marks = "))
+            total_marks = Kannada + English + Physics + Chemistry + Maths + Computer_Science
+            
+            percentage = total_marks / 600 * 100
+            print("Total Marks = ", total_marks)
+            print("Percentage = ", percentage)
+        else:
+            print("Invalid Optional Subject!")
+
+        
+
+    elif Stream == "commerce":
+
+        Optional_sub = input("Enter Your Optional Subject = ").lower()
+
+        if Optional_sub == "computer science" :
+            kannada = int(input("1. Enter Your Kannada Marks = "))
+            english = int(input("2. Enter Your English Marks = "))
+            economics = int(input("3. Enter Your Economics Marks = "))
+            accountancy = int(input("4. Enter Your Accountancy Marks = "))
+            business_studies = int(input("5. Enter Your Business Studies Marks = "))
+            computer_science = int(input("6. Enter Your Computer Science Marks = "))
+            total_marks = kannada + english + economics + accountancy + business_studies + computer_science
+    
+            percentage = total_marks /600 * 100
+            print("Total Marks = ", total_marks)
+            print("Percentage = ", percentage)
+
+        elif Optional_sub == "Statistics":
+            kannada = int(input("1. Enter Your Kannada Marks = "))
+            english = int(input("2. Enter Your English Marks = "))
+            economics = int(input("3. Enter Your Economics Marks = "))
+            accountancy = int(input("4. Enter Your Accountancy Marks = "))
+            business_studies = int(input("5. Enter Your Business Studies Marks = "))
+            statistics = int(input("6. Enter Your Statistics Marks = "))
+            total_marks = kannada + english + economics + accountancy + business_studies + statistics
+
+            percentage = total_marks / 600 * 100
+            print("Total Marks = ", total_marks)
+            print("Percentage = ", percentage)
+        else:
+            print("Invalid Optional Subject!")
+
+    elif Stream == "arts":
+
+        Optional_sub = input("Enter Your Optional Subject = ").lower()
+
+        if Optional_sub == "sociology":
+            kannada = int(input("1. Enter Your Kannada Marks = "))
+            english = int(input("2. Enter Your English Marks = "))
+            history = int(input("3. Enter Your History Marks = "))
+            political_science = int(input("4. Enter Your Political Science Marks = "))
+            economics = int(input("5. Enter Your Economics Marks = "))
+            sociology = int(input("6. Enter Your Sociology Marks = "))
+            total_marks = kannada + english + history + political_science + economics + sociology
+            
+            percentage = total_marks / 600 * 100
+            print("Total Marks = ", total_marks)
+            print("Percentage = ", percentage)
+
+        elif Optional_sub == "psychology":
+            kannada = int(input("1. Enter Your Kannada Marks = "))
+            english = int(input("2. Enter Your English Marks = "))
+            history = int(input("3. Enter Your History Marks = "))
+            political_science = int(input("4. Enter Your Political Science Marks = "))
+            economics = int(input("5. Enter Your Economics Marks = "))
+            psychology = int(input("6. Enter Your Psychology Marks = "))
+            total_marks = kannada + english + history + political_science + economics + psychology
+            
+            percentage = total_marks / 600 * 100
+            print("Total Marks = ", total_marks)
+            print("Percentage = ", percentage)
+            
+        elif Optional_sub == "geography":
+            kannada = int(input("1. Enter Your Kannada Marks = "))
+            english = int(input("2. Enter Your English Marks = "))
+            history = int(input("3. Enter Your History Marks = "))
+            political_science = int(input("4. Enter Your Political Science Marks = "))
+            economics = int(input("5. Enter Your Economics Marks = "))
+            geography = int(input("6. Enter Your Geography Marks = "))
+            total_marks = kannada + english + history + political_science + economics + geography
+            
+
+            percentage = total_marks / 600 * 100
+            print("Total Marks = ", total_marks)
+            print("Percentage = ", percentage)
+
+        else:
+            print("Invalid Optional Subject!")
+    else:
+        print("Invalid Stream!")
+
+
+
+if percentage >= 90:
+    print(f"Congratulation !,{Name} Well Done")
+elif(percentage >= 75 or percentage < 90):
+    print(f"Good Job {Name}")
+elif(percentage >= 50):
+    print(f"Good!,Try well {Name} ")
+else:
+    print("Try Again !")
+
+
+print("======================================================")
+print("-----------------:Thank you for visiting:---------------")
+print("========================================================")
